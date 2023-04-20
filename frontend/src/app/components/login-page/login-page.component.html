@@ -1,0 +1,40 @@
+<section class="vh-100 gradient-custom d-flex justify-content-center align-items-center">
+  <nav>
+    <a href="/">
+      <h4>Welcome to the Login Page</h4>
+    </a>
+    <ul>
+      <li><a href=''>Home</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
+    </ul>
+  </nav>
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+            <div class="login-form card">
+              <div class="card-body">
+                
+                <h2>Welcome Back</h2>
+                <p>Login Here</p>
+                <form name="form" (ngSubmit)="onSubmit()" #f="ngForm" novalidate>
+                  <div class="form-outline form-group">
+                    <input required type="text" id="username" name="username" class="form-control" [(ngModel)]="form.username" #username="ngModel" />
+                    <label class="form-label" for="username">Username</label>
+                  </div>
+                  <div class="form-outline form-group">
+                    <input required type="password" id="password" name="password" class="form-control" [(ngModel)]="form.password" #password="ngModel" />
+                    <label class="form-label" for="password">Password</label>
+                  </div>
+                  <button class="btn" outerLink="/" (click)="logout()">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

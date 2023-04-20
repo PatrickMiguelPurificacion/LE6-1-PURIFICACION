@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>List of Posts</title>
+</head>
+<body>
+  <nav>
+    <a href="/">
+      <h2>Welcome to my List of Posts</h2>
+    </a>
+    <ul>
+      <li><a href=''>Home</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
+    </ul>
+  </nav>
+   
+  <div class="gradient-custom">
+    <div class="container">
+      <h1 class="d">List of Posts Works!</h1>
+      <table>
+        <tbody>
+          <ng-container *ngFor="let post of posts">
+            <tr>
+              <td>
+                <h3 class="bod"><a href="/Post/{{ post.id}}">{{ post.title }}</a></h3>
+              </td>
+              <td>
+                <p class="det">by {{ post.firstName }} {{ post.lastName }};</p>
+              </td>
+              <td>
+                <p class="det">on {{ post.dateCreated }}</p>
+              </td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>

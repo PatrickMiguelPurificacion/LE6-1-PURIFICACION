@@ -1,0 +1,25 @@
+<nav>
+    <a href="/">
+      <h2>Welcome to my Post Details</h2>
+    </a>
+    <ul>
+      <li><a href=''>Home</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
+    </ul>
+  </nav>
+  <div class="gradient-custom">
+  <div class="post-detail">
+    <h1 class="a">Post Detail Works!</h1>
+    <h3 class="b"><a href="/Post/{{ post?.id}}">{{post?.title}}</a></h3>
+    <p class="c">By {{ post?.firstName }} {{ post?.lastName }} on {{ post?.dateCreated }}</p>
+    <p class="c">{{post?.body}}</p>
+    <div class="blog">
+      <div class="header">
+        <div class="info">
+          <div class="name"><p class="c">{{ post?.body }}</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
